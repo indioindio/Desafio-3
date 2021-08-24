@@ -72,6 +72,12 @@ function batalhapokemon(id1, id2) {
 
 }
 
+function pokemonheal(id) {
+    pokemon = pokemons [id]
+    pokemon.hp +=20
+    if (pokemon.hp>100) pokemon.hp = 100
+    return `${pokemon.nome} heal ${pokemon.hp} hp`
+}
 
 
-module.exports = {salvarpokemons, mostrarpokemon, mostrarpokemons, atualizarpokemon, deletarpokemon, batalhapokemon }
+module.exports = {salvarpokemons, mostrarpokemon, mostrarpokemons, atualizarpokemon, deletarpokemon, batalhapokemon, pokemonheal }
